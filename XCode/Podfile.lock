@@ -1,0 +1,31 @@
+PODS:
+  - AFNetworking (1.2.1)
+  - CKRefreshControl (1.1.0)
+  - Facebook-iOS-SDK (3.5.1)
+  - GoogleAnalytics-iOS-SDK (1.5.1)
+  - iRate (1.7.5)
+  - MBProgressHUD (0.6)
+  - SSKeychain (1.0.3)
+  - UIImage-Resize (0.1)
+
+DEPENDENCIES:
+  - AFNetworking
+  - CKRefreshControl
+  - Facebook-iOS-SDK
+  - GoogleAnalytics-iOS-SDK
+  - iRate
+  - MBProgressHUD
+  - SSKeychain
+  - UIImage-Resize
+
+SPEC CHECKSUMS:
+  AFNetworking: 616da0028916ce296f5c3cef74e5552eb4e10e13
+  CKRefreshControl: d90d7fe773e2cb0f54d9f917bc78e3a23e6cdc1b
+  Facebook-iOS-SDK: 0dbd897e842cefeb012ec2eb8eba659ba6b96b12
+  GoogleAnalytics-iOS-SDK: 018700821fe8e0acbe30760d83c7316965b27966
+  iRate: 8de5eaeca627c7708c8aec279eeb8daf2551c774
+  MBProgressHUD: 9b55a90566fb5d07df0602f6fd9fa04510ad5d52
+  SSKeychain: 0e7add9e329975653cb66c9d527493a5539755f6
+  UIImage-Resize: 8372efb7144f060a3482c8915388829787fe4b7c
+
+COCOAPODS: 0.19.1
