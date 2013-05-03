@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4432CDD01732D03200E4F24F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4432CDCF1732D03200E4F24F /* UIKit.framework */; };
+		4432CDD21732D03200E4F24F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4432CDD11732D03200E4F24F /* Foundation.framework */; };
+		4432CDD41732D03200E4F24F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4432CDD31732D03200E4F24F /* CoreGraphics.framework */; };
+		4432CDDC1732D03200E4F24F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4432CDDB1732D03200E4F24F /* main.m */; };
+		4432CDF41732D03200E4F24F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4432CDF31732D03200E4F24F /* SenTestingKit.framework */; };
+		4432CDF51732D03200E4F24F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4432CDCF1732D03200E4F24F /* UIKit.framework */; };
+		4432CDF61732D03200E4F24F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4432CDD11732D03200E4F24F /* Foundation.framework */; };
+		4432CDFE1732D03200E4F24F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4432CDFC1732D03200E4F24F /* InfoPlist.strings */; };
+		4432CE011732D03200E4F24F /* HeChooTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4432CE001732D03200E4F24F /* HeChooTests.m */; };
+		4432CE101732D12A00E4F24F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4432CE0D1732D12A00E4F24F /* Default-568h@2x.png */; };
+		4432CE111732D12A00E4F24F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4432CE0E1732D12A00E4F24F /* Default.png */; };
+		4432CE121732D12A00E4F24F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4432CE0F1732D12A00E4F24F /* Default@2x.png */; };
+		4432CE171732D16100E4F24F /* HCOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4432CE161732D16100E4F24F /* HCOViewController.m */; };
+		4432CE1A1732D19C00E4F24F /* HCOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4432CE191732D19C00E4F24F /* HCOAppDelegate.m */; };
+		4432CE211732D21300E4F24F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4432CE1D1732D21300E4F24F /* Default-568h@2x.png */; };
+		4432CE221732D21300E4F24F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4432CE1E1732D21300E4F24F /* Default.png */; };
+		4432CE231732D21300E4F24F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4432CE1F1732D21300E4F24F /* Default@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4432CDF71732D03200E4F24F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4432CDC41732D03200E4F24F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4432CDCB1732D03200E4F24F;
+			remoteInfo = HeChoo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4432CDCC1732D03200E4F24F /* HeChoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeChoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4432CDCF1732D03200E4F24F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4432CDD11732D03200E4F24F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4432CDD31732D03200E4F24F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4432CDD71732D03200E4F24F /* HeChoo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HeChoo-Info.plist"; sourceTree = "<group>"; };
+		4432CDDB1732D03200E4F24F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4432CDDD1732D03200E4F24F /* HeChoo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HeChoo-Prefix.pch"; sourceTree = "<group>"; };
+		4432CDF21732D03200E4F24F /* HeChooTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeChooTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4432CDF31732D03200E4F24F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		4432CDFB1732D03200E4F24F /* HeChooTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HeChooTests-Info.plist"; sourceTree = "<group>"; };
+		4432CDFD1732D03200E4F24F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4432CDFF1732D03200E4F24F /* HeChooTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeChooTests.h; sourceTree = "<group>"; };
+		4432CE001732D03200E4F24F /* HeChooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeChooTests.m; sourceTree = "<group>"; };
+		4432CE0D1732D12A00E4F24F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4432CE0E1732D12A00E4F24F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4432CE0F1732D12A00E4F24F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4432CE151732D16100E4F24F /* HCOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCOViewController.h; sourceTree = "<group>"; };
+		4432CE161732D16100E4F24F /* HCOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCOViewController.m; sourceTree = "<group>"; };
+		4432CE181732D19C00E4F24F /* HCOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCOAppDelegate.h; sourceTree = "<group>"; };
+		4432CE191732D19C00E4F24F /* HCOAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCOAppDelegate.m; sourceTree = "<group>"; };
+		4432CE1D1732D21300E4F24F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4432CE1E1732D21300E4F24F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4432CE1F1732D21300E4F24F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4432CDC91732D03200E4F24F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4432CDD01732D03200E4F24F /* UIKit.framework in Frameworks */,
+				4432CDD21732D03200E4F24F /* Foundation.framework in Frameworks */,
+				4432CDD41732D03200E4F24F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4432CDEE1732D03200E4F24F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4432CDF41732D03200E4F24F /* SenTestingKit.framework in Frameworks */,
+				4432CDF51732D03200E4F24F /* UIKit.framework in Frameworks */,
+				4432CDF61732D03200E4F24F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4432CDC31732D03200E4F24F = {
+			isa = PBXGroup;
+			children = (
+				4432CDD51732D03200E4F24F /* HeChoo */,
+				4432CDF91732D03200E4F24F /* HeChooTests */,
+				4432CDCE1732D03200E4F24F /* Frameworks */,
+				4432CDCD1732D03200E4F24F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4432CDCD1732D03200E4F24F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4432CDCC1732D03200E4F24F /* HeChoo.app */,
+				4432CDF21732D03200E4F24F /* HeChooTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4432CDCE1732D03200E4F24F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4432CDCF1732D03200E4F24F /* UIKit.framework */,
+				4432CDD11732D03200E4F24F /* Foundation.framework */,
+				4432CDD31732D03200E4F24F /* CoreGraphics.framework */,
+				4432CDF31732D03200E4F24F /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4432CDD51732D03200E4F24F /* HeChoo */ = {
+			isa = PBXGroup;
+			children = (
+				4432CE131732D16100E4F24F /* Classes */,
+				4432CE0A1732D12A00E4F24F /* Resources */,
+				4432CDD61732D03200E4F24F /* Supporting Files */,
+			);
+			path = HeChoo;
+			sourceTree = "<group>";
+		};
+		4432CDD61732D03200E4F24F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4432CDD71732D03200E4F24F /* HeChoo-Info.plist */,
+				4432CDDB1732D03200E4F24F /* main.m */,
+				4432CDDD1732D03200E4F24F /* HeChoo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4432CDF91732D03200E4F24F /* HeChooTests */ = {
+			isa = PBXGroup;
+			children = (
+				4432CDFF1732D03200E4F24F /* HeChooTests.h */,
+				4432CE001732D03200E4F24F /* HeChooTests.m */,
+				4432CDFA1732D03200E4F24F /* Supporting Files */,
+			);
+			path = HeChooTests;
+			sourceTree = "<group>";
+		};
+		4432CDFA1732D03200E4F24F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4432CDFB1732D03200E4F24F /* HeChooTests-Info.plist */,
+				4432CDFC1732D03200E4F24F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4432CE0A1732D12A00E4F24F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4432CE1B1732D21300E4F24F /* Images */,
+				4432CE201732D21300E4F24F /* XIB */,
+				4432CE0B1732D12A00E4F24F /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4432CE0B1732D12A00E4F24F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4432CE0C1732D12A00E4F24F /* Default */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		4432CE0C1732D12A00E4F24F /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				4432CE0D1732D12A00E4F24F /* Default-568h@2x.png */,
+				4432CE0E1732D12A00E4F24F /* Default.png */,
+				4432CE0F1732D12A00E4F24F /* Default@2x.png */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		4432CE131732D16100E4F24F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4432CE181732D19C00E4F24F /* HCOAppDelegate.h */,
+				4432CE191732D19C00E4F24F /* HCOAppDelegate.m */,
+				4432CE141732D16100E4F24F /* ViewControllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4432CE141732D16100E4F24F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4432CE151732D16100E4F24F /* HCOViewController.h */,
+				4432CE161732D16100E4F24F /* HCOViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4432CE1B1732D21300E4F24F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				4432CE1C1732D21300E4F24F /* Default */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		4432CE1C1732D21300E4F24F /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				4432CE1D1732D21300E4F24F /* Default-568h@2x.png */,
+				4432CE1E1732D21300E4F24F /* Default.png */,
+				4432CE1F1732D21300E4F24F /* Default@2x.png */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		4432CE201732D21300E4F24F /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4432CDCB1732D03200E4F24F /* HeChoo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4432CE041732D03200E4F24F /* Build configuration list for PBXNativeTarget "HeChoo" */;
+			buildPhases = (
+				4432CDC81732D03200E4F24F /* Sources */,
+				4432CDC91732D03200E4F24F /* Frameworks */,
+				4432CDCA1732D03200E4F24F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeChoo;
+			productName = HeChoo;
+			productReference = 4432CDCC1732D03200E4F24F /* HeChoo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4432CDF11732D03200E4F24F /* HeChooTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4432CE071732D03200E4F24F /* Build configuration list for PBXNativeTarget "HeChooTests" */;
+			buildPhases = (
+				4432CDED1732D03200E4F24F /* Sources */,
+				4432CDEE1732D03200E4F24F /* Frameworks */,
+				4432CDEF1732D03200E4F24F /* Resources */,
+				4432CDF01732D03200E4F24F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4432CDF81732D03200E4F24F /* PBXTargetDependency */,
+			);
+			name = HeChooTests;
+			productName = HeChooTests;
+			productReference = 4432CDF21732D03200E4F24F /* HeChooTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4432CDC41732D03200E4F24F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HCO;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Nicolas Bradier";
+			};
+			buildConfigurationList = 4432CDC71732D03200E4F24F /* Build configuration list for PBXProject "HeChoo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4432CDC31732D03200E4F24F;
+			productRefGroup = 4432CDCD1732D03200E4F24F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4432CDCB1732D03200E4F24F /* HeChoo */,
+				4432CDF11732D03200E4F24F /* HeChooTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4432CDCA1732D03200E4F24F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4432CE101732D12A00E4F24F /* Default-568h@2x.png in Resources */,
+				4432CE111732D12A00E4F24F /* Default.png in Resources */,
+				4432CE121732D12A00E4F24F /* Default@2x.png in Resources */,
+				4432CE211732D21300E4F24F /* Default-568h@2x.png in Resources */,
+				4432CE221732D21300E4F24F /* Default.png in Resources */,
+				4432CE231732D21300E4F24F /* Default@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4432CDEF1732D03200E4F24F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4432CDFE1732D03200E4F24F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4432CDF01732D03200E4F24F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4432CDC81732D03200E4F24F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4432CDDC1732D03200E4F24F /* main.m in Sources */,
+				4432CE171732D16100E4F24F /* HCOViewController.m in Sources */,
+				4432CE1A1732D19C00E4F24F /* HCOAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4432CDED1732D03200E4F24F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4432CE011732D03200E4F24F /* HeChooTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4432CDF81732D03200E4F24F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4432CDCB1732D03200E4F24F /* HeChoo */;
+			targetProxy = 4432CDF71732D03200E4F24F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4432CDFC1732D03200E4F24F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4432CDFD1732D03200E4F24F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4432CE021732D03200E4F24F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4432CE031732D03200E4F24F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4432CE051732D03200E4F24F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HeChoo/HeChoo-Prefix.pch";
+				INFOPLIST_FILE = "HeChoo/HeChoo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4432CE061732D03200E4F24F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HeChoo/HeChoo-Prefix.pch";
+				INFOPLIST_FILE = "HeChoo/HeChoo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4432CE081732D03200E4F24F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HeChoo.app/HeChoo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HeChoo/HeChoo-Prefix.pch";
+				INFOPLIST_FILE = "HeChooTests/HeChooTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4432CE091732D03200E4F24F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HeChoo.app/HeChoo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HeChoo/HeChoo-Prefix.pch";
+				INFOPLIST_FILE = "HeChooTests/HeChooTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4432CDC71732D03200E4F24F /* Build configuration list for PBXProject "HeChoo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4432CE021732D03200E4F24F /* Debug */,
+				4432CE031732D03200E4F24F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4432CE041732D03200E4F24F /* Build configuration list for PBXNativeTarget "HeChoo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4432CE051732D03200E4F24F /* Debug */,
+				4432CE061732D03200E4F24F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4432CE071732D03200E4F24F /* Build configuration list for PBXNativeTarget "HeChooTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4432CE081732D03200E4F24F /* Debug */,
+				4432CE091732D03200E4F24F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4432CDC41732D03200E4F24F /* Project object */;
+}
