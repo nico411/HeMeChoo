@@ -8,11 +8,17 @@
 
 #import "HCOAppDelegate.h"
 
+@interface HCOAppDelegate (PrivateMethods)
+
+@end
+
 @implementation HCOAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // Facebook
+    [HCOFacebookManager checkOnLaunch];
+    
     return YES;
 }
 							
@@ -36,11 +42,25 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    // Facebook
+    return [HCOFacebookManager handleDidBecomeActive];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Facebook management
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    // Facebook
+    return [HCOFacebookManager handleOpenURL:url];
 }
 
 @end
