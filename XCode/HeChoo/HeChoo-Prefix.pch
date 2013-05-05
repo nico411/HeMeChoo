@@ -14,3 +14,7 @@
 #endif
 
 #import "HCOFacebookManager.h"
+
+// Tools
+#import "Macros.h"
+#import "Constants.h"

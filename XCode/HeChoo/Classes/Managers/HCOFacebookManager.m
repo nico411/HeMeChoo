@@ -8,6 +8,10 @@
 
 #import "HCOFacebookManager.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import "HCOLoginViewController.h"
+
+#import <AFNetworking/AFNetworking.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @interface HCOFacebookManager (PrivateMethods)
 
@@ -28,6 +32,38 @@
     switch (state) {
         case FBSessionStateOpen: {
             // Close the login page
+            
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[[MainTabBarController presentedViewController] view]
+                                                      animated:YES];
+            hud.mode = MBProgressHUDModeIndeterminate;
+            hud.labelText = @"Loading";
+            
+            /*NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@/%@", BASE_URL, @"/users/create_fb"]];
+            NSURLRequest *request = [NSURLRequest requestWithURL:url];
+            
+            AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
+                                                                                                success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+                                                                                                    NSLog(@"IP Address: %@", [JSON valueForKeyPath:@"origin"]);
+                                                                                                    [hud hide:YES];
+                                                                                                }
+                                                                                                failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+                                                                                                    NSLog(@"IP Address: %@", [JSON valueForKeyPath:@"origin"]);
+                                                                                                    [hud hide:YES];
+                                                                                                }];
+            [operation start];*/
+            
+            NSURL *url = [NSURL URLWithString:@"http://api-base-url.com"];
+            AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+            NSData *imageData = UIImageJPEGRepresentation([UIImage imageNamed:@"avatar.jpg"], 0.5);
+            NSMutableURLRequest *request = [httpClient multipartFormRequestWithMethod:@"POST" path:@"/upload" parameters:nil constructingBodyWithBlock: ^(id <AFMultipartFormData>formData) {
+                [formData appendPartWithFileData:imageData name:@"avatar" fileName:@"avatar.jpg" mimeType:@"image/jpeg"];
+            }];
+            
+            AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+            [operation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
+                NSLog(@"Sent %lld of %lld bytes", totalBytesWritten, totalBytesExpectedToWrite);
+            }];
+            [httpClient enqueueHTTPRequestOperation:operation];
         }
             break;
         case FBSessionStateClosed:
@@ -75,12 +111,18 @@
     if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded)
     {
         // To-do, show logged in view
+        if (![[MainTabBarController presentedViewController] isKindOfClass:[HCOLoginViewController class]]) {
+            [MainTabBarController presentModalViewController:[MainStorybard instantiateViewControllerWithIdentifier:@"HCOLoginViewController"]
+                                                    animated:YES];
+        };
     }
     else
     {
-        // No, display the login page.
-        UIStoryboard *st = [UIStoryboard storyboardWithName:[[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"] bundle:[NSBundle mainBundle]];
-        [st instantiateViewControllerWithIdentifier:@"HCOLoginViewController"];
+        // No, check if the login is visible. If not, display the login page.
+        if (![[MainTabBarController presentedViewController] isKindOfClass:[HCOLoginViewController class]]) {
+            [MainTabBarController presentModalViewController:[MainStorybard instantiateViewControllerWithIdentifier:@"HCOLoginViewController"]
+                                                    animated:YES];
+        };
     }
 }
 

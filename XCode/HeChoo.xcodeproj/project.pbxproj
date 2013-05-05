@@ -29,6 +29,8 @@
 		4432CE121732D12A00E4F24F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4432CE0F1732D12A00E4F24F /* Default@2x.png */; };
 		4432CE171732D16100E4F24F /* HCOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4432CE161732D16100E4F24F /* HCOViewController.m */; };
 		4432CE1A1732D19C00E4F24F /* HCOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4432CE191732D19C00E4F24F /* HCOAppDelegate.m */; };
+		4494ABAB1735451000618F7A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4494ABAA1735451000618F7A /* SystemConfiguration.framework */; };
+		4494ABAD1735451900618F7A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4494ABAC1735451900618F7A /* MobileCoreServices.framework */; };
 		7C2B9470021B4B6C99AADDDC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5359E4CA8047A0B67AFB4C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,10 @@
 		4432CE161732D16100E4F24F /* HCOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCOViewController.m; sourceTree = "<group>"; };
 		4432CE181732D19C00E4F24F /* HCOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCOAppDelegate.h; sourceTree = "<group>"; };
 		4432CE191732D19C00E4F24F /* HCOAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCOAppDelegate.m; sourceTree = "<group>"; };
+		4494ABA8173543BB00618F7A /* Macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Macros.h; sourceTree = "<group>"; };
+		4494ABA9173543CA00618F7A /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		4494ABAA1735451000618F7A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4494ABAC1735451900618F7A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		7C5359E4CA8047A0B67AFB4C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B808ADA774FF482A9AA2C362 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -82,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4494ABAD1735451900618F7A /* MobileCoreServices.framework in Frameworks */,
+				4494ABAB1735451000618F7A /* SystemConfiguration.framework in Frameworks */,
 				44234B8B173413BF00D59424 /* libsqlite3.dylib in Frameworks */,
 				44234B891734139200D59424 /* Social.framework in Frameworks */,
 				44234B871734138C00D59424 /* Security.framework in Frameworks */,
@@ -157,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				44234B8A173413BF00D59424 /* libsqlite3.dylib */,
+				4494ABAC1735451900618F7A /* MobileCoreServices.framework */,
+				4494ABAA1735451000618F7A /* SystemConfiguration.framework */,
 				44234B881734139200D59424 /* Social.framework */,
 				44234B861734138C00D59424 /* Security.framework */,
 				44234B841734137F00D59424 /* AdSupport.framework */,
@@ -175,6 +185,7 @@
 			children = (
 				4432CE131732D16100E4F24F /* Classes */,
 				4432CE0A1732D12A00E4F24F /* Resources */,
+				4494ABA71735439F00618F7A /* Tools */,
 				4432CDD61732D03200E4F24F /* Supporting Files */,
 			);
 			path = HeChoo;
@@ -263,6 +274,15 @@
 			children = (
 			);
 			path = XIB;
+			sourceTree = "<group>";
+		};
+		4494ABA71735439F00618F7A /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				4494ABA8173543BB00618F7A /* Macros.h */,
+				4494ABA9173543CA00618F7A /* Constants.h */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
