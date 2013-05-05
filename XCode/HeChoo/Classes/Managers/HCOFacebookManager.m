@@ -52,18 +52,35 @@
                                                                                                 }];
             [operation start];*/
             
-            NSURL *url = [NSURL URLWithString:@"http://api-base-url.com"];
+            NSURL *url = [NSURL URLWithString:BASE_URL];
             AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
-            NSData *imageData = UIImageJPEGRepresentation([UIImage imageNamed:@"avatar.jpg"], 0.5);
-            NSMutableURLRequest *request = [httpClient multipartFormRequestWithMethod:@"POST" path:@"/upload" parameters:nil constructingBodyWithBlock: ^(id <AFMultipartFormData>formData) {
-                [formData appendPartWithFileData:imageData name:@"avatar" fileName:@"avatar.jpg" mimeType:@"image/jpeg"];
+            //NSData *imageData = UIImageJPEGRepresentation([UIImage imageNamed:@"avatar.jpg"], 0.5);
+            NSMutableURLRequest *request = [httpClient multipartFormRequestWithMethod:@"POST"
+                                                                                 path:@"/users/create_fb"
+                                                                           parameters:nil
+                                                            constructingBodyWithBlock:^(id <AFMultipartFormData>formData) {
+                //[formData appendPartWithFileData:imageData name:@"avatar" fileName:@"avatar.jpg" mimeType:@"image/jpeg"];
             }];
             
-            AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+            /*AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
             [operation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
                 NSLog(@"Sent %lld of %lld bytes", totalBytesWritten, totalBytesExpectedToWrite);
             }];
-            [httpClient enqueueHTTPRequestOperation:operation];
+            [httpClient enqueueHTTPRequestOperation:operation];*/
+            AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
+                                                                                                success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+                                                                                                    NSLog(@"request: %@", request);
+                                                                                                    NSLog(@"response: %@", response);
+                                                                                                    NSLog(@"JSON: %@", JSON);
+                                                                                                    [hud hide:YES];
+                                                                                                }
+                                                                                                failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+                                                                                                    NSLog(@"request: %@", request);
+                                                                                                    NSLog(@"error: %@", error);
+                                                                                                    NSLog(@"JSON: %@", JSON);
+                                                                                                    [hud hide:YES];
+                                                                                                }];
+            [operation start];
         }
             break;
         case FBSessionStateClosed:
